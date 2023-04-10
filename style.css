@@ -11,15 +11,23 @@ body {
 }
 
 .container {
-}
-
-.accordion {
-  margin: 300px auto;
-  width: 800px;
+  /* margin: 300px auto;
+  width: 1200px;
   max-width: 700px;
   overflow: auto;
 
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px; */
+}
+
+.accordion {
+  margin: 40px auto;
+  width: 1200px;
+  max-width: 700px;
+  overflow: auto;
+
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
 }
 
 .item {
@@ -33,13 +41,12 @@ body {
 }
 
 .number {
-  color: #099268;
   font-size: 24px;
   font-weight: 500;
+  color: #868e96;
 }
 
 .title {
-  color: #099268;
   font-size: 24px;
   font-weight: 500;
 }
@@ -53,6 +60,7 @@ body {
 
 .hidden-box {
   grid-column: 2/ 3;
+  display: none;
 }
 
 .text {
@@ -67,4 +75,14 @@ body {
 .lists li {
   margin-bottom: 15px;
   color: #868e96;
+}
+
+/* Active accordion item */
+.active .title,
+.active .number {
+  color: #099268;
+}
+
+.active .hidden-box {
+  display: block;
 }
